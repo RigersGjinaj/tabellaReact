@@ -9,3 +9,13 @@ table {
   height: 250px;
   width: 300px;
 }
+.inserimeto {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: left;
+  text-align: left;
+}
+input {
+  width: 100%;
+}

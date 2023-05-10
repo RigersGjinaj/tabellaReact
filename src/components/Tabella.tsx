@@ -46,10 +46,10 @@ function Tabella() {
           })}
         </table>
         <br />
-        <div>
-          <button onClick={() => setShowForm(true)}>
-            Inserisci uno studente
-          </button>
+        <button onClick={() => setShowForm(true)}>
+          Inserisci uno studente
+        </button>
+        <div className="inserimeto">
           {showForm && (
             <form onSubmit={() => aggiungi()}>
               <p>Nome:</p>
@@ -70,7 +70,7 @@ function Tabella() {
                 <option value="Female">Female</option>
               </select>
               <br /> <br />
-              <input type="submit" value="Salva" />
+              <input type="submit" value="Aggiungi" />
             </form>
           )}
         </div>
