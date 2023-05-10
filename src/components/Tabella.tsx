@@ -65,11 +65,10 @@ function Tabella() {
                 onChange={(e) => setAnni(e.target.value)}
               />
               <p>Genere:</p>
-              <input
-                type="text"
-                name="genere"
-                onChange={(e) => setGenere(e.target.value)}
-              />
+              <select name="genere" onChange={(e) => setGenere(e.target.value)}>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
               <br /> <br />
               <input type="submit" value="Salva" />
             </form>
