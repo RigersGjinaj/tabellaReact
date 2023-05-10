@@ -1,9 +1,11 @@
 import Tabella from "./components/Tabella";
-
+import "./App.css";
 function App() {
   return (
     <>
-      <Tabella></Tabella>
+      <div className="tabella">
+        <Tabella></Tabella>
+      </div>
     </>
   );
 }
