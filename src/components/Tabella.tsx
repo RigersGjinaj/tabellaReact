@@ -68,6 +68,7 @@ function Tabella() {
               <br /> <br />
               <label>Genere: </label>
               <select name="genere" onChange={(e) => setGenere(e.target.value)}>
+                <option>--</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
