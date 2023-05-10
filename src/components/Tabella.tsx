@@ -52,24 +52,27 @@ function Tabella() {
         <div className="inserimeto">
           {showForm && (
             <form onSubmit={() => aggiungi()}>
-              <p>Nome:</p>
+              <label>Nome:</label>
               <input
                 type="text"
                 name="nome"
                 onChange={(e) => setNome(e.target.value)}
               />
-              <p>Anni:</p>
+              <br /> <br />
+              <label>Anni:</label>
               <input
                 type="text"
                 name="anni"
                 onChange={(e) => setAnni(e.target.value)}
               />
-              <p>Genere:</p>
+              <br /> <br />
+              <label>Genere: </label>
               <select name="genere" onChange={(e) => setGenere(e.target.value)}>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
               <br /> <br />
+              <br />
               <input type="submit" value="Aggiungi" />
             </form>
           )}
