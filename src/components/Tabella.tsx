@@ -61,7 +61,7 @@ function Tabella() {
               <br /> <br />
               <label>Anni:</label>
               <input
-                type="text"
+                type="number"
                 name="anni"
                 onChange={(e) => setAnni(e.target.value)}
               />
