@@ -24,56 +24,58 @@ function Tabella() {
   }
   return (
     <>
-      <table>
-        <tr>
-          <th>Nome</th>
-          <th>Anni</th>
-          <th>Genere</th>
-          <th>Azione</th>
-        </tr>
-        {student.map((val, key) => {
-          return (
-            <tr key={key}>
-              <td>{val.name}</td>
-              <td>{val.age}</td>
-              <td>{val.gender}</td>
-              <td>
-                <button onClick={() => elimina(val.name)}>Elimina</button>
-              </td>
-            </tr>
-          );
-        })}
-      </table>
-      <br />
-      <div>
-        <button onClick={() => setShowForm(true)}>
-          Inserisci uno studente
-        </button>
-        {showForm && (
-          <form onSubmit={() => aggiungi()}>
-            <p>Nome:</p>
-            <input
-              type="text"
-              name="nome"
-              onChange={(e) => setNome(e.target.value)}
-            />
-            <p>Anni:</p>
-            <input
-              type="text"
-              name="anni"
-              onChange={(e) => setAnni(e.target.value)}
-            />
-            <p>Genere:</p>
-            <input
-              type="text"
-              name="genere"
-              onChange={(e) => setGenere(e.target.value)}
-            />
-            <br /> <br />
-            <input type="submit" value="Salva" />
-          </form>
-        )}
-      </div>
+      <center>
+        <table>
+          <tr>
+            <th>Nome</th>
+            <th>Anni</th>
+            <th>Genere</th>
+            <th>Azione</th>
+          </tr>
+          {student.map((val, key) => {
+            return (
+              <tr key={key}>
+                <td>{val.name}</td>
+                <td>{val.age}</td>
+                <td>{val.gender}</td>
+                <td>
+                  <button onClick={() => elimina(val.name)}>Elimina</button>
+                </td>
+              </tr>
+            );
+          })}
+        </table>
+        <br />
+        <div>
+          <button onClick={() => setShowForm(true)}>
+            Inserisci uno studente
+          </button>
+          {showForm && (
+            <form onSubmit={() => aggiungi()}>
+              <p>Nome:</p>
+              <input
+                type="text"
+                name="nome"
+                onChange={(e) => setNome(e.target.value)}
+              />
+              <p>Anni:</p>
+              <input
+                type="text"
+                name="anni"
+                onChange={(e) => setAnni(e.target.value)}
+              />
+              <p>Genere:</p>
+              <input
+                type="text"
+                name="genere"
+                onChange={(e) => setGenere(e.target.value)}
+              />
+              <br /> <br />
+              <input type="submit" value="Salva" />
+            </form>
+          )}
+        </div>
+      </center>
     </>
   );
 }
