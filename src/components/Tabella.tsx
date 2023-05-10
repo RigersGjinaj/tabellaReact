@@ -10,8 +10,17 @@ const data = [
 
 function Tabella() {
   const [student, setStudent] = useState(data);
+  const [showForm, setShowForm] = useState(false);
+  const [nome, setNome] = useState("");
+  const [anni, setAnni] = useState("");
+  const [genere, setGenere] = useState("");
   function elimina(s: String) {
     setStudent(student.filter((obj) => obj.name !== s));
+  }
+  function aggiungi() {
+    student.push({ name: nome, age: parseInt(anni), gender: genere });
+    setStudent(student);
+    setShowForm(false);
   }
   return (
     <>
@@ -35,6 +44,36 @@ function Tabella() {
           );
         })}
       </table>
+      <br />
+      <div>
+        <button onClick={() => setShowForm(true)}>
+          Inserisci uno studente
+        </button>
+        {showForm && (
+          <form onSubmit={() => aggiungi()}>
+            <p>Nome:</p>
+            <input
+              type="text"
+              name="nome"
+              onChange={(e) => setNome(e.target.value)}
+            />
+            <p>Anni:</p>
+            <input
+              type="text"
+              name="anni"
+              onChange={(e) => setAnni(e.target.value)}
+            />
+            <p>Genere:</p>
+            <input
+              type="text"
+              name="genere"
+              onChange={(e) => setGenere(e.target.value)}
+            />
+            <br /> <br />
+            <input type="submit" value="Salva" />
+          </form>
+        )}
+      </div>
     </>
   );
 }
